@@ -1,7 +1,7 @@
-import db from "..";
+import db from "../index";
 import { advocates } from "../schema";
 
-const specialties = [
+export const specialties = [
   "Bipolar",
   "LGBTQ",
   "Medication/Prescribing",
