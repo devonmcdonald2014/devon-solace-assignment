@@ -13,6 +13,12 @@
 /.next/
 /out/
 
+# workspace settings
+/.vscode/
+
+# drizzle logs
+/drizzle/
+
 # production
 /build
 
