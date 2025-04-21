@@ -1,12 +1,18 @@
-import db from "../../../db";
-import { advocates } from "../../../db/schema";
-import { advocateData } from "../../../db/seed/advocates";
+import db from "@/db/index";
+import { advocates } from "@/db/schema";
+import { NextResponse } from "next/server";
 
 export async function GET() {
+
+  try {
   // Uncomment this line to use a database
-  // const data = await db.select().from(advocates);
+  const data = await db.select().from(advocates);
 
-  const data = advocateData;
+  console.log( data )
 
-  return Response.json({ data });
+  return NextResponse.json({ data })
+  } catch ( e ) {
+    console.error( e )
+  }
+
 }
